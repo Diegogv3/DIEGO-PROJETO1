@@ -14,6 +14,7 @@ let palavraMostrada = [];
 // Array que armazenará a palavra a ser mostrada (com letras adivinhadas)
 
 function iniciarJogo() {
+    
     palavraEscolhida = palavras[Math.floor(Math.random() * palavras.length)]; 
     // Escolhe uma palavra aleatoriamente da lista
 
@@ -77,11 +78,15 @@ function verificarFimDeJogo() {
         // Se não houver mais traços, o jogador venceu
         iniciarJogo(); 
         // Reinicia o jogo
+        letrasErradas = [];
+        tentativasRestantes = 6;
     } else if (tentativasRestantes === 0) {
         alert(`Você perdeu! A palavra era: ${palavraEscolhida}`); 
         // Se acabaram as tentativas, o jogador perdeu
         iniciarJogo(); 
         // Reinicia o jogo
+        letrasErradas = [];
+        tentativasRestantes = 6;
     }
 }
 
