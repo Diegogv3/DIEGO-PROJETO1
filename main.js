@@ -60,4 +60,30 @@ function adivinharLetra() {
         tentativasRestantes--; 
         // Diminui o número de tentativas restantes
     }
+
+    document.getElementById("tentativas-restantes").innerHTML = `Tentativas restantes: ${tentativasRestantes}`; 
+    // Atualiza o número de tentativas restantes
+
+    document.getElementById("letras-erradas").innerHTML = `Letras erradas: ${letrasErradas.join(", ")}`; 
+    // Atualiza a lista de letras erradas
+
+    verificarFimDeJogo(); 
+    // Verifica se o jogo acabou
 }
+
+function verificarFimDeJogo() {
+    if (!palavraMostrada.includes("_")) {
+        alert("Parabéns! Você ganhou!"); 
+        // Se não houver mais traços, o jogador venceu
+        iniciarJogo(); 
+        // Reinicia o jogo
+    } else if (tentativasRestantes === 0) {
+        alert(`Você perdeu! A palavra era: ${palavraEscolhida}`); 
+        // Se acabaram as tentativas, o jogador perdeu
+        iniciarJogo(); 
+        // Reinicia o jogo
+    }
+}
+
+window.onload = iniciarJogo; 
+// Inicia o jogo quando a página é carregada
