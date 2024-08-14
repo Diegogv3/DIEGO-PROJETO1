@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif; /* Define a fonte usada no corpo da página */
+    background-color: #f0f0f0; /* Define a cor de fundo da página */
+    text-align: center; /* Centraliza o texto */
+    margin: 0; /* Remove as margens da página */
+    padding: 0; /* Remove os preenchimentos da página */
+}
+
+#container-jogo {
+    margin-top: 50px; /* Define uma margem superior de 50px */
+}
+
+#palavra {
+    font-size: 24px; /* Define o tamanho da fonte da palavra */
+    margin-bottom: 20px; /* Define uma margem inferior de 20px */
+}
+
+#container-letras {
+    margin-bottom: 20px; /* Define uma margem inferior de 20px */
+}
+
+#input-letra {
+    font-size: 20px; /* Define o tamanho da fonte do input */
+    padding: 5px; /* Define o preenchimento do input */
+    width: 50px; /* Define a largura do input */
+    text-align: center; /* Centraliza o texto dentro do input */
+}
+
+button {
+    font-size: 20px; /* Define o tamanho da fonte do botão */
+    padding: 5px 10px; /* Define o preenchimento do botão */
+    margin-left: 10px; /* Define uma margem à esquerda do botão */
+    cursor: pointer; /* Define o cursor como um ponteiro ao passar sobre o botão */
+}
+
+#tentativas-restantes, #letras-erradas {
+    font-size: 18px; /* Define o tamanho da fonte para as tentativas restantes e letras erradas */
+    margin-top: 20px; /* Define uma margem superior de 20px */
+}

@@ -1,40 +1,22 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="estilo.css">
-    <title>Jogo da forca</title>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o layout responsivo -->
+    <title>Jogo da Forca</title> <!-- Título da página -->
+    <link rel="stylesheet" href="estilo.css"> <!-- Link para o arquivo de estilo CSS -->
 </head>
-
 <body>
-
-    <div class="caixa">
-        <div class="caixa_conteudo">
-            <div class="caixa_informacoes">
-                <div class="caixa_texto">
-                    <h1>Jogo da forca</span></h1>
-                    <p class="texto__paragrafo">Escolha um número entre 1 a 10</p>
-                </div>
-                <input class="caixa_input">
-                <div class="chute caixa_botoes">
-                    <button onclick="verificarChute()" class="container__botao">Chutar</button>
-                    <button onclick="reiniciarJogo()" id="reiniciar" class="container__botao" disabled>Novo jogo</button>
-                </div>
-            </div>
+    <h1>Jogo da Forca</h1> <!-- Título do jogo na página -->
+    <div id="container-jogo"> <!-- Contêiner principal do jogo -->
+        <p id="palavra"></p> <!-- Parágrafo onde a palavra será exibida -->
+        <div id="container-letras"> <!-- Contêiner para as letras -->
+            <input type="text" id="input-letra" maxlength="1"> <!-- Campo para o usuário digitar uma letra -->
+            <button onclick="adivinharLetra()">Adivinhar</button> <!-- Botão para enviar a letra -->
         </div>
     </div>
-
-
-
-
-    <script src="main.js" defer></script>
+    <p id="tentativas-restantes"></p> <!-- Exibe as tentativas restantes -->
+    <p id="letras-erradas"></p> <!-- Exibe as letras erradas -->
+    <script src="main.js"></script> <!-- Importa o arquivo JavaScript -->
 </body>
-
 </html>
