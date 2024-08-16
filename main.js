@@ -41,7 +41,7 @@ function adivinharLetra() {
     // Limpa o campo de input
 
     if (letrasErradas.includes(letra) || palavraMostrada.includes(letra)) {
-        alert("Você já adivinhou essa letra!"); 
+        alert("Você já escolheu essa letra!"); 
         // Alerta se a letra já foi adivinhada antes
         return;
     }
