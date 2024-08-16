@@ -177,18 +177,27 @@ function adivinharLetra() {
 
 function verificarFimDeJogo() {
     if (!palavraMostrada.includes("_")) {
-        alert("Parabéns! Você ganhou!"); 
+        alert(`Parabéns! Você ganhou! A palavra era ${palavraEscolhida}`); 
         // Se não houver mais traços, o jogador venceu
         letrasErradas = [];
+
+        for (let i = 0; i < palavraEscolhida.length; i++) {
+            palavraMostrada[i] = ""; 
+        }
+
         iniciarJogo(); 
         // Reinicia o jogo
-        letrasErradas = [];
         tentativasRestantes = 6;
         document.getElementById("tentativas-restantes").innerHTML = `Tentativas restantes: ${tentativasRestantes}`;
     } else if (tentativasRestantes === 0) {
         alert(`Você perdeu! A palavra era: ${palavraEscolhida}`); 
         // Se acabaram as tentativas, o jogador perdeu
         letrasErradas = [];
+
+        for (let i = 0; i < palavraEscolhida.length; i++) {
+            palavraMostrada[i] = ""; 
+        }
+
         iniciarJogo(); 
         // Reinicia o jogo
         tentativasRestantes = 6;
