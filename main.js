@@ -1,3 +1,5 @@
+banana = 2;
+
 const palavras = ["javascript", "programacao", "computador", "desenvolvimento"]; 
 // Lista de palavras possíveis para o jogo
 
