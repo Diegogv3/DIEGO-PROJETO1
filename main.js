@@ -80,6 +80,7 @@ function verificarFimDeJogo() {
         // Reinicia o jogo
         letrasErradas = [];
         tentativasRestantes = 6;
+        document.getElementById("tentativas-restantes").innerHTML = `Tentativas restantes: ${tentativasRestantes}`;
     } else if (tentativasRestantes === 0) {
         alert(`Você perdeu! A palavra era: ${palavraEscolhida}`); 
         // Se acabaram as tentativas, o jogador perdeu
@@ -87,6 +88,7 @@ function verificarFimDeJogo() {
         // Reinicia o jogo
         letrasErradas = [];
         tentativasRestantes = 6;
+        document.getElementById("tentativas-restantes").innerHTML = `Tentativas restantes: ${tentativasRestantes}`;
     }
 }
 
